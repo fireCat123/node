@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="statics/css/site.css">
+    <script src='statics/js/jquery.min.js'></script>
+</head>
+<body>
+    <table border='1'>
+        <tr class='tr'>
+            <th>序号</th>
+            <th>音乐名</th>
+            <th>操作</th>            
+        </tr>
+       
+            {{#each(music)}}
+             <tr class='tr1'>
+               <td>{{xindex}}</td>
+               <td>{{this.name}}</td>
+               <td><a href='#' onclick="play('{{this.name}}')">操作</a></td>
+             </tr>  
+            {{/each}}     
+    </table>
+    <audio id="audioId" src="" autoplay>
+        
+    </audio>
+    <script>
+      function play(musicName){
+          var url = 'statics/musics/'+musicName;
+          $('#audioId').attr('src',url);
+      }
+    </script>
+</body>
+</html>

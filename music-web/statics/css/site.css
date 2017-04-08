@@ -1,0 +1,12 @@
+table{
+  width: 400px;
+  margin : 0 auto;
+  border-collapse: collapse;
+}
+.tr{
+    background-color:blue;
+    color:white;
+}
+.tr1{
+    text-align: center;
+}
